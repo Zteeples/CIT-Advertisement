@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+.sliding_mario {
+    position: absolute;
+    width: 300px;
+    height: 170px;
+    top: 200px;
+    left: 940px;
+    background-image:url(mario.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: 2.5s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+}
+@keyframes slide {
+    from { left: 940px; }
+    to {top: 36%; }
+}
+.bg {
+    position: static;
+    background-image:url(background.webp);
+    width: 1280px;
+    height: 720px;
+}
+.flag {
+    position: absolute;
+    height: 500px;
+    width: 200px;
+    top: 165px;
+    left: 900px;
+    background-image:url(flag.webp);
+}
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="sliding_mario"></div>
+        <div class="flag"></div>
+    </div>
+</body>
+</html>
